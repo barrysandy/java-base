@@ -3,6 +3,7 @@ package com.xgb.java.base.ArrayList;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
@@ -94,8 +95,46 @@ public class ListTest {
 	}
 	
 	
+	/**
+	 * 四、HashTable 和 HashMap 的选择
+	 * 了解算法的人可能对HashTable比较熟悉，因为他是一个数据结构的名字。但在Java里边，用HashMap来表示这样的数据结构。
+	 * Hashtable和 HashMap的一个关键性的不同是，HashTable是同步的，而HashMap不是。所以通常不需要HashTable，HashMap用的更多。
+	 */
+	public static void hashMapAndTable(){
+		
+	}
+	
+	
+	/**
+	 * 五、使用原始集合类型
+	 * 使用原始集合类型是很危险的，因为原始集合类型跳过了泛型类型检查，是不安全的。Set、Set< ? >和Set< Object >之间有很大差别。
+	 */
+	
+	/**
+	 * 六、访问级别
+	 * 程序员们经常使用public作为类中的字段的修饰符，因为这样可以很简单的通过引用得到值，但这并不是好的设计，按照经验，分配给成员变量的访问级别应该尽可能的低。
+	 */
+	
+	/**
+	 * 七、ArrayList与LinkedList的选择
+	 * 当程序员们不知道ArrayList与LinkedList的区别时，他们经常使用ArrayList，因为它看起来比较熟悉。然而，它们之前有巨大的性能差别。
+	 * 在ArrayList vs LinkedList vs Vector 区别、Java中常见亲属比较等文章中介绍过，简而言之，如果有大量的增加删除操作并且没有很多的随机访问元素的操作，
+	 * 应该首先LinkedList。（LinkedList更适合从中间插入或者删除（链表的特性））
+	 */
+	
+	public static void linkedListTest(){
+		LinkedList<String> linkedList = new LinkedList<String>();
+		linkedList.add("hello ");
+		linkedList.add("linkedList ");
+		linkedList.add("is ");
+		linkedList.add("List ");
+		System.out.println("LinkedList : " + linkedList.size());
+	}
+	
+	
+	
 	public static void main(String[] args) {
-		deleteEleInArrayByFor();
+		linkedListTest();
 	}
 
 }
