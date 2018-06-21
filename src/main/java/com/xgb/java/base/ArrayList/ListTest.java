@@ -28,7 +28,6 @@ public class ListTest {
 		 */
 		ArrayList<String> arrayList = new ArrayList<String>(Arrays.asList(arr));
 		
-		
 	}
 	
 	/**

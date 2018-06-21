@@ -1,18 +1,15 @@
 package com.xgb.java.base.map;
 
-import java.io.FileNotFoundException;
 import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * HashMap的实现原理
  * 1、基于哈希表（数组+链表+二叉树（红黑树））JDK1.8
  * 2、默认加载因子为0.75，默认数组大小是16（1 << 4）
  * 3、把对象存储到哈希表中，如何存储？
- *	把key对象通过hash()方法技术hash值，然后用这个hash值对数组长度取余数（默认16），来决定对该key的对象在数组中的位置index，
+ *	把key对象通过hash()方法计算hash值，然后用这个hash值对数组长度取余数（默认16），来决定对该key的对象在数组中的位置index，
  *	当这个位置有多个对象时，以链表结构存储，JDK1.8后，当链表长度大于8时，链表将转换为红黑树结构存储。
  *	（这样的目的是为了取值更快，存储数据量越大，性能表现越明显。）
  * 4、扩容原理：当数组的容量超过了负载因子，你们表示该数组需要扩容，如何扩容？
