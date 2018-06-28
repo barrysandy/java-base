@@ -1,11 +1,8 @@
 package com.xgb.java.base.mytomcat;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.OutputStream;
-
-import javax.imageio.stream.FileImageInputStream;
 
 /**
  * 响应封装类：就是写信息给请求者

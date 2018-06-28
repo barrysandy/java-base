@@ -9,6 +9,7 @@ import java.util.Date;
 public class Server {
 	
 	private static int count = 0;
+	private final static int PORT = 8000;
 	
 	public static void main(String[] args) {
 		ServerSocket ss = null;
@@ -16,8 +17,8 @@ public class Server {
 		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		String ctime = format.format(new Date());
 		try {
-			ss = new ServerSocket(8000);
-			System.out.println("服务器已经初始化，等待客户端连接....");
+			ss = new ServerSocket(PORT);
+			System.out.println("服务器已经初始化(port:" + PORT + ")，等待客户端连接....（http://localhost:8000/）");
 			while(true) {
 				socket = ss.accept();
 				count ++ ;
