@@ -1,4 +1,4 @@
-package com.xgb.java.base.single;
+package com.xgb.java.base.designpattern.single;
 
 public class SingleB {
 
